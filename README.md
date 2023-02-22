@@ -10,14 +10,14 @@ Given the following validation rule:
 It can be converted to the following input with its attributes:
 
 ```
-    <input 
-        name="username" 
-        required="required" 
-        type="text" 
-        minlength="3" 
-        maxlength="64" 
-        pattern="^[a-z]([a-z0-9]|[a-z0-9]\.[a-z0-9])*$" 
-    >
+<input 
+    name="username" 
+    required="required" 
+    type="text" 
+    minlength="3" 
+    maxlength="64" 
+    pattern="^[a-z]([a-z0-9]|[a-z0-9]\.[a-z0-9])*$" 
+>
 ```
 
 Visiting route ‘/signup’ get, it is possible to see the result of applying this concept.
