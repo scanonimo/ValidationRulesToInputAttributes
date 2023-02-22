@@ -4,6 +4,8 @@ namespace Tests;
 
 use App\Models\User;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Illuminate\Support\Str;
+use function session;
 use function validator;
 
 abstract class TestCase extends BaseTestCase
@@ -39,6 +41,26 @@ abstract class TestCase extends BaseTestCase
                 ]);
             }
         }
+    }
+    
+    public function assertExpectedErrorWasReceivedUsingAPattern(
+            string $expectedError, 
+            string $field
+    ): void {
+        $this->assertNotEmpty(
+            $errors = session('errors')->get($field),
+            "No error found in session for '$field'."
+        );
+        
+        $this->assertTrue(
+                Str::is($expectedError, $errors[0]),
+                $this->wrongErrorReceived($expectedError, $errors[0])
+        );
+    }
+    
+    public function wrongErrorReceived(string $expectedError, string $errorReturned): string {
+        return "Wrong error received. Expected error was '$expectedError' ".
+                "but the received error is '$errorReturned'";
     }
     
     protected function errorMessageNotFound(array $data, $rule) {
