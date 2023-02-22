@@ -30,4 +30,5 @@ https://laracasts.com/discuss/channels/code-review/transform-validation-rules-in
 If my code is a little hard to read, please check my tests and commit sequence, were I try to justify the purpose of every line in my code. Especially BlueprintsFactoryTest.
 
 Copyright (c) 2023, Ariel Del Valle Lozano <arielenterdev@gmail.com>
+
 http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License (GPL) version 3
