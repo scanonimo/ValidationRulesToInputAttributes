@@ -31,4 +31,4 @@ If my code is a little hard to read, please check my tests and commit sequence, 
 
 Copyright (c) 2023, Ariel Del Valle Lozano <arielenterdev@gmail.com>
 
-http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License (GPL) version 3
+GNU General Public License (GPL) version 3 http://www.gnu.org/licenses/gpl-3.0.html
