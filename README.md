@@ -3,9 +3,8 @@
 Given the following validation rule:
 
 ```
-'username' => ['name' => 'username', 'required' => 'required',
-                'type' => 'text', 'minlength' => 3, 'maxlength' => 64,
-                'pattern' => '^[a-z]([a-z0-9]|[a-z0-9]\.[a-z0-9])*$']
+'username' => ['required', 'string', 'min:3', 'max:64',
+                'regex:/^[a-z]([a-z0-9]|[a-z0-9]\.[a-z0-9])*$/i']
 ```
 
 It can be converted to the following input with its attributes:
